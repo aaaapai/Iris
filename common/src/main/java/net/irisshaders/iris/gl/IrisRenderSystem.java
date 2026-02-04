@@ -279,11 +279,11 @@ public class IrisRenderSystem {
 	}
 
 	public static boolean supportsSSBO() {
-		return GL.getCapabilities().OpenGL44 || (GL.getCapabilities().GL_ARB_shader_storage_buffer_object && GL.getCapabilities().GL_ARB_buffer_storage);
+		return true;
 	}
 
 	public static boolean supportsImageLoadStore() {
-		return GL.getCapabilities().glBindImageTexture != 0L || GL.getCapabilities().OpenGL42 || ((GL.getCapabilities().GL_ARB_shader_image_load_store || GL.getCapabilities().GL_EXT_shader_image_load_store) && GL.getCapabilities().GL_ARB_buffer_storage);
+		return true;
 	}
 
 	public static void genBuffers(int[] buffers) {
